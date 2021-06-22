@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+
+    <script>
+    // по окончанию загрузки страницы
+    $(document).ready(function(){   
+        console.log("ready");           
+        // Вешаем обработчик на пункты меню
+        $(document).on("click touchend", "#fac, #group, #shedule, #credit", function () {
+            console.log("push");
+            let q;
+            q = $(this).attr("title");
+            console.log(q);
+            q = q + ".html";
+            console.log(q);
+            // загрузку HTML кода из файла
+            $('#main').load(q);       
+        }) 
+    }); 
+
+</script>
+
+</head>
+<body>
+
+
+    <table>
+        <tr>
+            <td><img id="#example-1" src="img/logo.jpg"></td>
+            <td>Сидоренко Д.А.</td>
+        </tr>
+        
+        <tr>
+        
+            <td><p id="fac" title="fac">Мой факультет</p></td>
+            <td><p id="group" title="group">Моя группа</p></td>
+            <td><p id="shedule" title="shedule">Расписание</p></td>
+            <td><p id="credit" title="credit">Зачеты</p></td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <div id="main">
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    
+</body>
+</html>
