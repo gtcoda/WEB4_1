@@ -8,66 +8,134 @@
     <script src="jquery-3.6.0.js"></script>
 
     <script>
-        // по окончанию загрузки страницы
-        $(document).ready(function(){   
-            console.log("ready");           
-            // Вешаем обработчик на пункты меню
-            $(document).on("click touchend", "#faculty, #group, #shedule, #credit", function () {
-                console.log("push");
-                let q;
-                q = $(this).attr("title");
-                console.log(q);
-                q = q + ".html";
-                console.log(q);
-                // загрузку HTML кода из файла
-                $('#main').load(q);       
-            }) 
-        }); 
-  
-    </script>
+    // по окончанию загрузки страницы
+    $(document).ready(function(){   
+        console.log("ready");  
+        
+        // загрузку HTML кода из файла
+        $('#main').load("main.html"); 
+        // Вешаем обработчик на пункты меню
+        $(document).on("click touchend", "#faculty, #group, #shedule, #credit", function () {
+            console.log("push");
+            let q;
+            q = $(this).attr("title");
+            console.log(q);
+            q = q + ".html";
+            console.log(q);
+            // загрузку HTML кода из файла
+            $('#main').load(q);       
+        }) 
+    }); 
 
-    <style>
-        .center {
-            width: 100px; /* Ширина элемента в пикселах */
-            margin: auto; /* Выравниваем по центру */
-            border: 1px solid black;
+</script>
+
+<style>
+    TABLE {
+    width: 100%; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+   }
+   TD, TH {
+    vertical-align: top;
+    text-align: center;
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+   }
+   TH {
+    background: #b0e0e6; /* Цвет фона */
+   }
+
+   VERT{
+        width: 300px;
+   }
+
+</style>
+
+
+<style>
+       .tab{
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 500px;
         }
-        .center tr {
-            border: 1px solid black;
+
+        .tab th {
+            border: 2px solid black;
+            background: #396;
         }
-        .center td {
+
+        .tab .days{
+            border-right: 1px solid red;
+            /*border-right-color: transparent;*/
+        }
+
+
+        .tab .hours{
+            border-right: 1px solid red;
+        }
+
+        .day{   }
+
+        .day td{
             border: 1px solid black;
         }
 
-    </style>
+        .day_w{
+            writing-mode: vertical-lr;
+            align-content: center;
+            text-align: center;
+            background: #396;
+            
+        }
+        .hour_w{
+            background: #0C6;
+        }
+
+        .sp_w{
+            background: #36F;
+        }
+</style>
 
 
 </head>
 <body>
 
 
-        <table class="center">
-            <tr>
-                <td><img id="#example-1" src="img/logo.jpg"></td>
-                <td colspan="3">Сидоренко Д.А.</td>
-            </tr>
+    <table >
+    <tr>
+        <td width=100px><img id="#example-1" src="img/logo.jpg"></td>
+        <td>
+            <div>
+                <p>Сидоренко Д.А</p>
+                <p>Группа: АССЗ-41</p>
+            </div>
             
-            <tr>
-            
-                <td><p id="faculty" title="faculty">Мой факультет</p></td>
-                <td><p id="group" title="group">Моя группа</p></td>
-                <td><p id="shedule" title="shedule">Расписание</p></td>
-                <td><p id="credit" title="credit">Зачеты</p></td>
+        
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p><a href="#" id="faculty" title="faculty">Мой факультет</a></p>
+            <p><a href="#" id="group" title="group">Моя группа</a></p>
+            <p><a href="#" id="shedule" title="shedule">Расписание</a></p>
+            <p><a href="#" id="credit" title="credit">Зачеты</a></p>
+        </td>
+        <td >
+            <div style="text-align: left;" id="main">
+                   
+            </div>
 
-            </tr>
+        </td>
+    </tr>
 
-            <tr>
-                <td colspan="4">
-                    <div id="main">
+   
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    </table>
 
-                    </div>
-                </td>
-            </tr>
-        </table>    
+
+
 </body>
 </html>
