@@ -1,0 +1,113 @@
+.container {
+    width: 100%;
+    max-width: 1000px; /*максимальная ширина */
+    margin: 0 auto;
+    border: 1px solid black;
+  }
+
+  .container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+ 
+  .logo{
+    width: 30%;
+    float: left;
+    border: 1px solid green;
+  }
+
+  .caption{
+    margin-left: 31%;
+    
+    border: 1px solid green;
+  }
+
+
+
+  .menu{
+    width: 30%;
+    float: left;
+
+    border: 1px solid green;
+
+  }
+
+  .basic{
+    margin-left: 31%;
+
+    border: 1px solid green;
+  }
+
+
+
+  .menu ul{
+            
+  }
+
+  .menu ul a{
+    display: block; /* Ссылка как блочный элемент */
+    padding: 5px; /* Поля вокруг надписи */
+    border-left: 10px solid #13694e; /* Линия слева */
+    border-bottom: 1px solid silver; /* Линия между пунктами */
+    background: #74a18e; /* Исходный цвет фона */
+    color: white; /* Исходный цвет текста */
+    text-decoration: none /* Убираем подчеркивание у ссылок */
+  }
+
+  .menu li{
+    list-style-type: none;
+    margin-left: -40px;
+  }
+
+  .menu li a:hover{
+    border-left-color: orange; /* Меняем цвет линии слева */
+    background: #a18e74; /* Новый цвет фона под ссылкой */
+    color: #ffffcc /* Новый цвет ссылки */
+  }
+
+
+
+
+  /*Стили для расписания*/
+  .tab{
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 500px;
+}
+
+.tab th {
+    border: 2px solid black;
+    background: #396;
+}
+
+.tab .days{
+    border-right: 1px solid red;
+    /*border-right-color: transparent;*/
+}
+
+
+.tab .hours{
+    border-right: 1px solid red;
+}
+
+.day{   }
+
+.day td{
+    border: 1px solid black;
+}
+
+.day_w{
+    writing-mode: vertical-lr;
+    align-content: center;
+    text-align: center;
+    background: #396;
+    
+}
+.hour_w{
+    background: #0C6;
+}
+
+.sp_w{
+    background: #36F;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script>
+    // по окончанию загрузки страницы
+    $(document).ready(function(){   
+        console.log("ready");  
+        
+        // загрузку HTML кода из файла
+        $('#main').load("main.html"); 
+        // Вешаем обработчик на пункты меню
+        $(document).on("click touchend", "#faculty, #group, #shedule, #credit", function () {
+            console.log("push");
+            let q;
+            q = $(this).attr("title");
+            console.log(q);
+            q = q + ".html";
+            console.log(q);
+            // загрузку HTML кода из файла
+            $('#main').load(q);       
+        }) 
+    }); 
+
+</script>
+
+
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.jpg">
+            </div>
+            <div class="caption">
+                <p>Сидоренко Д.А</p>
+                <p>Группа: АССЗ-41</p>
+            </div>    
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="container">
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#" id="faculty" title="faculty">Мой факультет</a></li>
+                        <li><a href="#" id="group" title="group">Моя группа</a></li>
+                        <li><a href="#" id="shedule" title="shedule">Расписание</a></li>
+                        <li><a href="#" id="credit" title="credit">Зачеты</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="basic">
+                <div id="main">
+                   Основной текст
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container"> Подвал</div>
+    </footer>
+
+
+
+</body>
+</html>
