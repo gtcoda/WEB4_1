@@ -14,8 +14,9 @@
         
         // загрузку HTML кода из файла
         $('#main').load("main.html"); 
+        $('#menu').load("menu.html"); 
         // Вешаем обработчик на пункты меню
-        $(document).on("click touchend", "#faculty, #form, #shedule, #credit", function () {
+        $(document).on("click touchend", "#author, #form, #major", function () {
             console.log("push");
             let q;
             q = $(this).attr("title");
@@ -25,29 +26,73 @@
             // загрузку HTML кода из файла
             $('#main').load(q);       
         }) 
+
+        $('#hidden').load("info.html");
+        $('#hidden').css("display","none");
+
+
+        $(document).on("click touchend",".inf",function(){
+           
+            console.log("push info");
+            let q;
+            q = '#'+$(this).attr("title");
+            console.log(q);
+            
+            $('#info').html($(q).html());
+            
+          
+            
+        
+        
+        
+        
+        
+        
+        });
+
     }); 
+
+
+
+
 
 </script>
 
 <style>
-    TABLE {
-    width: 100%; /* Ширина таблицы */
-    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+    TABLE {   
+        width: 600px; /* Ширина таблицы */
+        border-collapse: collapse; /* Убираем двойные линии между ячейками */
+        margin: auto;
    }
    TD, TH {
-    vertical-align: top;
-    text-align: center;
-    padding: 3px; /* Поля вокруг содержимого таблицы */
-    border: 1px solid black; /* Параметры рамки */
+        vertical-align: top;
+        text-align: center;
+        padding: 3px; /* Поля вокруг содержимого таблицы */
+        border: 1px solid black; /* Параметры рамки */
    }
    TH {
-    background: #b0e0e6; /* Цвет фона */
+        background: #b0e0e6; /* Цвет фона */
    }
 
-   VERT{
-        width: 300px;
+   .tab_menu {
+        width: auto;
+        border-collapse: collapse; /* Убираем двойные линии между ячейками */
+        border: 2px solid white;
    }
 
+   .tab_menu td{
+        border: 2px solid white;
+   }
+
+   .form{
+    width: auto;
+        border-collapse: collapse; /* Убираем двойные линии между ячейками */
+        border: 2px solid white;
+   }
+
+   .form td{
+        border: 2px solid white;
+   }
 </style>
 
 
@@ -56,15 +101,12 @@
 <body>
 
 
-    <table >
+    <table id="site">
     <tr>
-        <td width=100px><img id="#example-1" src="img/logo.jpg"></td>
+        <td width=100px><img width="200"  id="#example-1" src="img/Damavand.jpg"></td>
         <td>
             <div>
-                <p>Сидоренко Д.А</p>
-                <p>Группа: АССЗ-41</p>
-                <P>Лабораторная работа №3</p>
-
+                <p>Горы. Высокие и не очень.</p>
             </div>
             
         
@@ -72,9 +114,10 @@
     </tr>
     <tr>
         <td >
-            <p><a href="#" id="faculty" title="">Главная</a></p>
-            <p><a href="#" id="form" title="form">Форма</a></p>
-            <p><a href="#" id="shedule" title="shedule">О Авторе</a></p>
+            <div id="menu">
+
+            </div>
+
         </td>
         <td >
             <div style="text-align: left;" id="main">
@@ -83,9 +126,12 @@
 
         </td>
     </tr>
+
     </table>
 
+<div id="hidden">
 
+</div>
 
 </body>
 </html>
