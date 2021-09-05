@@ -1,8 +1,17 @@
+.wrapper{
+  width: 80%;
+  margin: auto;
+}
+
+.header{
+  border-bottom: black 2px solid;
+}
+
+
 .container {
-    width: 100%;
     max-width: 1000px; /*максимальная ширина */
     margin: 0 auto;
-    border: 1px solid black;
+
   }
 
   .container:after {
@@ -14,13 +23,11 @@
   .logo{
     width: 30%;
     float: left;
-    border: 1px solid green;
+ 
   }
 
   .caption{
     margin-left: 31%;
-    
-    border: 1px solid green;
   }
 
 
@@ -28,17 +35,21 @@
   .menu{
     width: 30%;
     float: left;
-
-    border: 1px solid green;
+    
 
   }
 
   .basic{
     margin-left: 31%;
+    border-left: black 2px solid;
 
-    border: 1px solid green;
+  
   }
 
+  .main{
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+  }
 
 
   .menu ul{
