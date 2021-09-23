@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $(".MsoNormal:even").hide();
+            });
+            $("#show").click(function () {
+                $(".MsoNormal:even").show();
+            });
+
+            $("p.MsoNormal").click(function () {
+                $(this).css("background-color", "#cccccc");
+            });
+
+            $("p.MsoNormal").dblclick(function () {
+                $(this).css("background-color", "#ffffff");
+            });
+            
+            $("input").focus(function () {
+                $(this).css("background-color", "#cccccc");
+            });
+            
+            $("input").blur(function () {
+                $(this).css("background-color", "#ffffff");
+            });
+
+
+
+
+            // Задание 2
+            
+            $("table img").mouseover(function () {
+                $(this).css("opacity","0");
+            });
+            
+            $("table img").mouseout(function () {
+                $(this).css("opacity","1");
+            });
+
+            // Задание 3
+
+
+            var idInterval = null;
+
+            $("#blue").click( function(){
+                if(idInterval == null){
+                    idInterval = setInterval(function () {
+                        $("#neo").fadeIn(2000);
+                        $("#smit").fadeOut(2000);
+                        $("#neo").fadeOut(2000);
+                        $("#smit").fadeIn(2000);          
+                    },
+                    4000);
+                }
+            });
+
+            $("#red").click(function () {
+               clearInterval(idInterval);
+               idInterval = null;
+               $("#neo").fadeIn();
+                $("#smit").fadeIn();
+            });
+
+        });
+    </script>
+    <title>LR6
+
+    </title>
+</head>
+<body>
+    <button id="show">Показать</button>
+    <button id="hide">Скрыть</button>
+
+    <p class="MsoNormal">Первый</p>
+    <p class="MsoNormal">Второй</p>
+    <p class="MsoNormal">Третий</p>
+    <p class="MsoNormal">Четвертый</p>
+    <p class="MsoNormal">Пятый</p>
+    <p class="MsoNormal">Шестой</p>
+    <p class="MsoNormal">Седьмой</p>
+    <p class="MsoNormal">Восьмой</p>
+
+
+    <p>
+        Name: <input type="text" name="fullname"><br>
+        Email: <input type="text" name="email">
+    </p>
+
+    <p>Задание 2</p>
+
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td><img width="150" src="https://static3.statics.life/online/poster/9329bd8599.jpg"></td>
+            <td><img width="150" src="https://static.findanime.net/uploads/pics/00/24/243.jpg"></td>
+        </tr>
+    </table>
+
+    <p> Задание 3 </p>
+    <p>
+        <button id="blue">Синяя</button>
+        <button id="red">Красная</button>
+    </p>
+    <p>
+    <img id="neo" style="display: none;" width="445" src="https://www.mirf.ru/wp-content/uploads/2020/02/neo-matrix-keanu-reeves.jpg">
+    <img id="smit" style="display: none;" width="250" src="https://img.kupigolos.ru/hero/5d001fa70b40c.jpg?p=bh&s=22836a0236d257eddb293a78808ce88b">
+    </p>
+</body>
+</html>
