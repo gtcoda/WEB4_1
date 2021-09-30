@@ -1,11 +1,12 @@
+// 
 .menu {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; /*Цвет фона меню*/
     width: 500px; /*Ширина меню*/
 }
 
 
 .menu li:hover {
-    background-color: #f87777;
+    background-color: #f87777;/*Цвет фона ячейки меню при наведении курсора*/
     cursor: pointer; /*Курсор при наведении в указатель*/
     color: #f8f8f8;
 }

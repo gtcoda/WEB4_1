@@ -7,10 +7,10 @@
   border-bottom: black 2px solid;
 }
 
-
 .container {
-    max-width: 1000px; /*максимальная ширина */
+    /*max-width: 1000px; максимальная ширина */
     margin: 0 auto;
+    background-color: burlywood;
 
   }
 
@@ -30,20 +30,15 @@
     margin-left: 31%;
   }
 
-
-
   .menu{
     width: 30%;
     float: left;
-    
-
   }
 
   .basic{
     margin-left: 31%;
     border-left: black 2px solid;
-
-  
+    width: 20%;
   }
 
   .main{
@@ -51,10 +46,6 @@
     border-bottom: solid 2px black;
   }
 
-
-  .menu ul{
-            
-  }
 
   .menu ul a{
     display: block; /* Ссылка как блочный элемент */
@@ -101,8 +92,6 @@
 .tab .hours{
     border-right: 1px solid red;
 }
-
-.day{   }
 
 .day td{
     border: 1px solid black;
