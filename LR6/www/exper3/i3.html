@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Индивидуальное задание 2</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            var idInterval = null;
+
+            $("#blue").click(function () {
+                if (idInterval == null) {
+                    idInterval = setInterval(function () {
+                        $("#neo").fadeIn(2000);
+                        $("#smit").fadeOut(2000);
+                        $("#neo").fadeOut(2000);
+                        $("#smit").fadeIn(2000);
+                    },
+                        4000);
+                }
+            });
+
+            $("#red").click(function () {
+                clearInterval(idInterval);
+                idInterval = null;
+                $("#neo").fadeIn();
+                $("#smit").fadeIn();
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <p>
+        <button id="blue">Синяя</button>
+        <button id="red">Красная</button>
+    </p>
+    <p>
+        <img id="neo" style="display: none;" width="445"
+            src="https://www.mirf.ru/wp-content/uploads/2020/02/neo-matrix-keanu-reeves.jpg">
+        <img id="smit" style="display: none;" width="250"
+            src="https://img.kupigolos.ru/hero/5d001fa70b40c.jpg?p=bh&s=22836a0236d257eddb293a78808ce88b">
+    </p>
+</body>
+
+</html>

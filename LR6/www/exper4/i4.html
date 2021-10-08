@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Индивидуальное задание 4</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#run4").click(function () {
+                console.log("Z4!");
+                var paragr = $("#z4>p");
+                $(paragr[3]).animate({ left: '100px' });
+                $(paragr[5]).animate({ left: '100px' });
+            });
+
+            $("#z4>img").click(function () {
+                $(this).animate({ top: '+=30px' });
+            });
+        });
+
+    </script>
+
+    <style>
+        #z4 {
+            position: relative;
+            width: 500px;
+        }
+        #z4 div {
+            position: relative;
+        }
+        #z4 img {
+            position: relative;
+        }
+        #z4 p {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="z4">
+        <p><button id="run4">Активировать</button></p>
+        <p>Сейчас часто любят вспоминать, что в советское время дети мечтали стать космонавтами, а сегодня это, якобы,
+            никому не интересно.</p>
+
+        <img width="100" src="https://habrastorage.org/r/w1560/files/79f/4a6/54e/79f4a654eb594431bd08cf64e8ad1946.jpg">
+
+        <p>Помните ли вы, что штурм Венеры на фотонном планетолете «Хиус» в книге «Страна багровых туч» братьев
+            Стругацких состоялся в конце ХХ века? А к началу XXI века, по хронологии Стругацких, Солнечная система была
+            уже вполне освоена, с заводами на Венере и научными станциями на спутниках Юпитера и Сатурна. </p>
+        <img width="100" src="https://habrastorage.org/r/w1560/files/2e2/a5a/95d/2e2a5a95d32e4a9ea1c798bfe023556b.jpeg">
+        <p>Серьезное движение вспять по дороге освоения космоса может случиться только вместе с глобальным катаклизмом.
+        </p>
+        <img width="100" src="https://habrastorage.org/r/w1560/files/16f/c6f/2fd/16fc6f2fda3a4ec9b1f2b97096112f78.jpg">
+        <p>Сто лет назад считалось, что Марс появился раньше Земли, а Венера — позже. Соответственно, на Марсе ожидали
+            увидеть руины древних цивилизаций, а на Венере — динозавров или дикарей. </p>
+        <img width="100" src="https://habrastorage.org/r/w1560/files/5c7/4f1/3ba/5c74f13ba2dc466996fec452469fdcf6.jpg">
+        <p>Как одна из отраслей деятельности человечества, космонавтика работает с очень сложной и интересной техникой.
+            Подумайте только, в следующем году исполнится сорок лет с запуска космических аппаратов «Вояджер», а эти
+            зонды еще работают. </p>
+        <img width="100" src="https://habrastorage.org/r/w1560/files/3db/fb8/667/3dbfb8667e1a41bf80de7509b57c2016.jpg">
+    </div>
+</body>
+
+</html>

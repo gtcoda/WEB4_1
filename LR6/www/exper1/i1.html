@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Индивидуальное задание 1</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $(".MsoNormal:even").hide();
+            });
+            $("#show").click(function () {
+                $(".MsoNormal:even").show();
+            });
+
+            $("p.MsoNormal").click(function () {
+                $(this).css("background-color", "#cccccc");
+            });
+
+            $("p.MsoNormal").dblclick(function () {
+                $(this).css("background-color", "#ffffff");
+            });
+
+            $("input").focus(function () {
+                $(this).css("background-color", "#cccccc");
+            });
+
+            $("input").blur(function () {
+                $(this).css("background-color", "#ffffff");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="show">Показать</button>
+    <button id="hide">Скрыть</button>
+
+    <p class="MsoNormal">Первый</p>
+    <p class="MsoNormal">Второй</p>
+    <p class="MsoNormal">Третий</p>
+    <p class="MsoNormal">Четвертый</p>
+    <p class="MsoNormal">Пятый</p>
+    <p class="MsoNormal">Шестой</p>
+    <p class="MsoNormal">Седьмой</p>
+    <p class="MsoNormal">Восьмой</p>
+
+
+    <p>
+        Name: <input type="text" name="fullname"><br>
+        Email: <input type="text" name="email">
+    </p>
+</body>
+
+</html>

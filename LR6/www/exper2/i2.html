@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Индивидуальное задание 2</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("table img").mouseover(function () {
+                $(this).css("opacity", "0");
+            });
+
+            $("table img").mouseout(function () {
+                $(this).css("opacity", "1");
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td><img width="150" src="https://static3.statics.life/online/poster/9329bd8599.jpg"></td>
+            <td><img width="150" src="https://static.findanime.net/uploads/pics/00/24/243.jpg"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
